@@ -5,7 +5,7 @@ import axios from 'axios'
 import moment from 'moment'
 
 import Layout from '../components/Layout/Layout'
-import { XIcon } from '@heroicons/react/outline'
+import { XIcon, SearchIcon } from '@heroicons/react/outline'
 
 const demoImage = '/news-icon.jpg'
 
@@ -104,12 +104,15 @@ export default function News() {
     <Layout>
       <div className="flex py-4 mb-2 items-center">
         <div className="flex relative items-center">
+        
           <input className="border-2 px-2 py-2 rounded-lg w-80" 
                 onChange={handleChange}
                 onKeyDown={handleKeyDown}
                 type="text" 
                 value={searchValue}
-                placeholder="cryptocurrency"/>
+                placeholder=""/>
+          {searchValue === '' && <SearchIcon className="text-gray-400 w-6 h-6 absolute left-2"/>
+          }
           {searchValue !== '' && <XIcon onClick={() => setSearchValue("")} 
               className="cursor-pointer text-gray-400 w-6 h-6 absolute right-2"/>
           }
