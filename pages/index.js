@@ -96,7 +96,7 @@ export default function Home() {
 
   const RenderStats = ({stats}) => {
     const Card = ({title, data}) => (
-      <div className="px-2 py-4 bg-white border-2 shadow-lg rounded-lg">
+      <div className="px-2 py-4 my-4 bg-white border-2 shadow-lg rounded-lg">
         <span className="tracking-wide">{title}: </span>
         <span className="text-blue-500 font-semibold">{data}</span>
       </div>
