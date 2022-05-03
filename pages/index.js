@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import Layout from '../components/Layout/Layout'
+
 import millify from 'millify'
 import Link from 'next/link'
 import axios from 'axios'
+
+import Layout from '../components/Layout/Layout'
+import LoadingSpinner from '../components/LoadingSpinner'
+
 
 const CRYPTO_PERPAGE = 50
 
@@ -60,11 +64,11 @@ export default function Home() {
     )
 
     return (
-    <div className="overflow-auto mt-4 w-full">
+    <div className="overflow-auto mt-10 w-full">
     <table className="table-auto w-full shadow-xl">
       <thead className="">
         <tr className="font-bold border-y-2 border-slate-200 ">
-          <td className="p-2">No</td>
+          <td className="p-2">#</td>
           <td className="p-2">Cryptocurrency</td>
           <td className="p-2">Price ($)</td>
           <td className="p-2">Change (%)</td>
@@ -96,15 +100,15 @@ export default function Home() {
 
   const RenderStats = ({stats}) => {
     const Card = ({title, data}) => (
-      <div className="px-2 py-4 my-4 bg-white border-2 shadow-lg rounded-lg">
+      <div className="px-2 py-4 bg-white border-2 shadow-lg rounded-lg">
         <span className="tracking-wide">{title}: </span>
         <span className="text-blue-500 font-semibold">{data}</span>
       </div>
     )
     return (
-      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 mx-auto my-4" >
-        <Card title="Total Coins" data={millify(stats.totalCoins)} />
-        <Card title="Total Exchanges" data={millify(stats.totalExchanges)} />
+      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 px-2 mx-auto mt-4" >
+        <Card title="Total Coins" data={stats.totalCoins.toLocaleString()} />
+        <Card title="Total Exchanges" data={stats.totalExchanges.toLocaleString()} />
         <Card title="Total Market Cap" data={millify(stats.totalMarketCap)} />
         <Card title="Total 24H Volume" data={millify(stats.total24hVolume)} />
       </div>
@@ -153,7 +157,7 @@ export default function Home() {
 
   return (
     <Layout>
-      { !isLoading && <RenderData/> }
+      { isLoading ? <LoadingSpinner /> : <RenderData/> }
     </Layout>
   )
 }

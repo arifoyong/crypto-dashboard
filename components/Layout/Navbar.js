@@ -32,19 +32,9 @@ const NavBar = () => {
               Home
             </a>
           </Link>
-          <Link href='/crypto'>
-            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-200 hover:text-gray-600'>
-              Cryptocurrency
-            </a>
-          </Link>
           <Link href='/news'>
             <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-200 hover:text-gray-600'>
               News
-            </a>
-          </Link>
-          <Link href='/contactus'>
-            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-200 hover:text-gray-600'>
-              Contact us
             </a>
           </Link>
         </div>
