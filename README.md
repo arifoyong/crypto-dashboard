@@ -5,12 +5,13 @@ This is a dashboard application for cryptocurrency. The dashboard displays gener
 View demo: [link](https://tiny-crostata-ee1f80.netlify.app/)
 
 Screenshot:
-![Screenshot 01](https://github.com/arifoyong/crypto-dashboard/blob/master/screenshot/screenshot01.png)
-![Screenshot 02](https://github.com/arifoyong/crypto-dashboard/blob/master/screenshot/screenshot02.png)
-![Screenshot 03](https://github.com/arifoyong/crypto-dashboard/blob/master/screenshot/screenshot03.png)
+![Screenshot 01](https://github.com/arifoyong/crypto-dashboard/blob/main/master/screenshot/screenshot01.png)
+![Screenshot 02](https://github.com/arifoyong/crypto-dashboard/blob/main/master/screenshot/screenshot02.png)
+![Screenshot 03](https://github.com/arifoyong/crypto-dashboard/blob/main/master/screenshot/screenshot03.png)
 
 
-To run:
+## Running the project
+On root directory:
 ```bash
 npm run dev
 # or
