@@ -2,6 +2,14 @@
 
 This is a dashboard application for cryptocurrency. The dashboard displays general overview of crypto market, prices of coins, and crypto news. Data is aggregated from [rapidapi.com](https://rapidapi.com/)
 
+View demo: [link](https://tiny-crostata-ee1f80.netlify.app/)
+
+Screenshot:
+![Screenshot 01](https://github.com/arifoyong/crypto-dashboard/blob/master/screenshot/screenshot01.png)
+![Screenshot 02](https://github.com/arifoyong/crypto-dashboard/blob/master/screenshot/screenshot02.png)
+![Screenshot 03](https://github.com/arifoyong/crypto-dashboard/blob/master/screenshot/screenshot03.png)
+
+
 To run:
 ```bash
 npm run dev
